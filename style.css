@@ -612,3 +612,66 @@ footer p {
   }
 
   }
+/* ================================
+   MOBILE CONTACT BAR
+================================ */
+
+.mobile-contact-bar {
+  display: none;
+}
+
+@media (max-width: 600px) {
+
+  .mobile-contact-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 65px;
+    background: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: stretch;
+    z-index: 99999;
+    box-shadow: 0 -4px 18px rgba(0,0,0,0.15);
+  }
+
+  .mobile-contact-bar a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    gap: 2px;
+  }
+
+  .mobile-contact-bar span {
+    font-size: 21px;
+    line-height: 22px;
+  }
+
+  .mobile-contact-bar small {
+    font-size: 11px;
+  }
+
+  .contact-call {
+    color: #087ee8;
+    border-right: 1px solid #e5e5e5;
+  }
+
+  .contact-whatsapp {
+    color: #18b957;
+    border-right: 1px solid #e5e5e5;
+  }
+
+  .contact-book {
+    background: #087ee8;
+    color: #ffffff !important;
+  }
+
+  body {
+    padding-bottom: 65px;
+  }
+}
