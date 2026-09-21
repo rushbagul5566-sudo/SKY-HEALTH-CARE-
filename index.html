@@ -1,444 +1,1203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Sky Healthcare | Home Healthcare Services in Pune</title>
-  <meta name="description" content="Sky Healthcare provides professional home nursing, caretaker, ICU nursing, physiotherapy, doctor home visits and medical equipment rental services in Pune.">
+<title>Sky Healthcare | Home Healthcare Services in Pune</title>
 
-  <link rel="stylesheet" href="style.css">
+<meta name="description" content="Sky Healthcare provides professional home nursing, ICU nursing, patient caretaker, elderly care, doctor home visit, physiotherapy and medical equipment rental services in Pune.">
+
+<meta name="keywords" content="home healthcare Pune, home nursing Pune, ICU nursing Pune, caretaker Pune, patient care Pune, physiotherapy Pune, medical equipment rental Pune">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:#18324a;
+  background:#f7fbff;
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+}
+
+.container{
+  width:92%;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* HEADER */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:999;
+  background:rgba(255,255,255,.96);
+  box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.nav{
+  height:75px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo-icon{
+  width:45px;
+  height:45px;
+  border-radius:12px;
+  background:#087ee8;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:24px;
+  font-weight:bold;
+}
+
+.logo h2{
+  color:#087ee8;
+  font-size:21px;
+}
+
+.logo small{
+  display:block;
+  font-size:10px;
+  color:#607d94;
+}
+
+nav{
+  display:flex;
+  gap:25px;
+}
+
+nav a{
+  color:#18324a;
+  font-weight:600;
+  font-size:14px;
+}
+
+nav a:hover{
+  color:#087ee8;
+}
+
+.nav-btn{
+  background:#087ee8;
+  color:#fff!important;
+  padding:11px 18px;
+  border-radius:25px;
+}
+
+/* HERO */
+
+.hero{
+  background:linear-gradient(135deg,#eaf6ff,#ffffff);
+  padding:85px 0 75px;
+  overflow:hidden;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:50px;
+  align-items:center;
+}
+
+.badge{
+  display:inline-block;
+  background:#dff1ff;
+  color:#087ee8;
+  padding:8px 15px;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-size:48px;
+  line-height:1.12;
+  margin-bottom:20px;
+  color:#123b59;
+}
+
+.hero h1 span{
+  color:#087ee8;
+}
+
+.hero p{
+  color:#607d94;
+  font-size:18px;
+  max-width:650px;
+  margin-bottom:28px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 23px;
+  border-radius:30px;
+  font-weight:bold;
+  border:none;
+  cursor:pointer;
+  font-size:15px;
+}
+
+.btn-primary{
+  background:#087ee8;
+  color:white;
+}
+
+.btn-whatsapp{
+  background:#18b957;
+  color:white;
+}
+
+.btn-outline{
+  border:2px solid #087ee8;
+  color:#087ee8;
+  background:white;
+}
+
+.hero-card{
+  background:white;
+  border-radius:30px;
+  padding:30px;
+  box-shadow:0 20px 60px rgba(8,126,232,.15);
+}
+
+.hero-card h3{
+  color:#087ee8;
+  margin-bottom:18px;
+}
+
+.hero-point{
+  display:flex;
+  gap:12px;
+  margin:16px 0;
+  align-items:center;
+}
+
+.check{
+  width:32px;
+  height:32px;
+  background:#e4f5ff;
+  color:#087ee8;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+}
+
+/* SECTIONS */
+
+section{
+  padding:75px 0;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.section-title span{
+  color:#087ee8;
+  font-size:14px;
+  font-weight:bold;
+  text-transform:uppercase;
+}
+
+.section-title h2{
+  font-size:34px;
+  margin:8px 0;
+  color:#123b59;
+}
+
+.section-title p{
+  max-width:650px;
+  margin:auto;
+  color:#6c8293;
+}
+
+/* SERVICES */
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.card{
+  background:white;
+  border-radius:20px;
+  padding:25px;
+  box-shadow:0 8px 30px rgba(24,50,74,.07);
+  transition:.3s;
+  border:1px solid #edf4f8;
+}
+
+.card:hover{
+  transform:translateY(-7px);
+  box-shadow:0 15px 35px rgba(8,126,232,.14);
+}
+
+.icon{
+  width:55px;
+  height:55px;
+  border-radius:16px;
+  background:#e7f5ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:27px;
+  margin-bottom:17px;
+}
+
+.card h3{
+  font-size:18px;
+  margin-bottom:8px;
+}
+
+.card p{
+  font-size:14px;
+  color:#708494;
+}
+
+/* TRUST */
+
+.trust{
+  background:#087ee8;
+  color:white;
+}
+
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  text-align:center;
+}
+
+.trust-box{
+  padding:20px;
+}
+
+.trust-box strong{
+  display:block;
+  font-size:30px;
+}
+
+.trust-box span{
+  font-size:14px;
+  opacity:.9;
+}
+
+/* SPECIAL CARE */
+
+.special-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.special{
+  background:white;
+  padding:25px;
+  border-radius:20px;
+  border-left:4px solid #087ee8;
+  box-shadow:0 8px 25px rgba(0,0,0,.05);
+}
+
+.special h3{
+  margin-bottom:8px;
+}
+
+.special p{
+  color:#718595;
+  font-size:14px;
+}
+
+/* EQUIPMENT */
+
+.equipment{
+  background:#eef8ff;
+}
+
+.equipment-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+/* HOW */
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.step{
+  text-align:center;
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+
+.step-number{
+  width:55px;
+  height:55px;
+  background:#087ee8;
+  color:white;
+  margin:0 auto 15px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  font-weight:bold;
+}
+
+/* AREAS */
+
+.areas{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.area{
+  background:white;
+  padding:11px 18px;
+  border-radius:25px;
+  box-shadow:0 5px 18px rgba(0,0,0,.06);
+  font-weight:600;
+  font-size:14px;
+}
+
+/* FAQ */
+
+.faq{
+  max-width:850px;
+  margin:auto;
+}
+
+details{
+  background:white;
+  margin-bottom:12px;
+  padding:18px 20px;
+  border-radius:12px;
+  box-shadow:0 5px 18px rgba(0,0,0,.05);
+}
+
+summary{
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* BOOKING */
+
+.booking{
+  background:linear-gradient(135deg,#eaf7ff,#ffffff);
+}
+
+.booking-box{
+  max-width:850px;
+  margin:auto;
+  background:white;
+  padding:35px;
+  border-radius:25px;
+  box-shadow:0 15px 45px rgba(8,126,232,.12);
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+input,select,textarea{
+  width:100%;
+  padding:14px;
+  border:1px solid #dce8ef;
+  border-radius:10px;
+  font-size:15px;
+  outline:none;
+}
+
+textarea{
+  min-height:120px;
+  resize:vertical;
+  margin-top:15px;
+}
+
+.full{
+  grid-column:1/-1;
+}
+
+.submit{
+  width:100%;
+  margin-top:18px;
+  background:#18b957;
+  color:white;
+}
+
+/* CONTACT */
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.contact-card{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+
+.contact-item{
+  margin:15px 0;
+}
+
+.contact-item strong{
+  display:block;
+  color:#087ee8;
+}
+
+/* FOOTER */
+
+footer{
+  background:#092b42;
+  color:white;
+  padding:45px 0 85px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:30px;
+}
+
+footer p,footer a{
+  color:#b8ccda;
+  font-size:14px;
+}
+
+footer h3{
+  margin-bottom:12px;
+}
+
+.copyright{
+  border-top:1px solid rgba(255,255,255,.1);
+  margin-top:30px;
+  padding-top:20px;
+  text-align:center;
+  color:#9eb4c3;
+}
+
+/* FLOATING */
+
+.float-whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:90px;
+  width:55px;
+  height:55px;
+  background:#18b957;
+  color:white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+  z-index:1000;
+  box-shadow:0 5px 20px rgba(0,0,0,.2);
+}
+
+/* MOBILE BAR */
+
+.mobile-bar{
+  display:none;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  nav{
+    display:none;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:38px;
+  }
+
+  .services-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .special-grid,
+  .equipment-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .trust-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:600px){
+
+  section{
+    padding:55px 0;
+  }
+
+  .hero{
+    padding:55px 0;
+  }
+
+  .hero h1{
+    font-size:32px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .services-grid,
+  .special-grid,
+  .equipment-grid,
+  .steps,
+  .contact-grid,
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .trust-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .section-title h2{
+    font-size:28px;
+  }
+
+  .booking-box{
+    padding:22px;
+  }
+
+  .float-whatsapp{
+    bottom:75px;
+  }
+
+  .mobile-bar{
+    position:fixed;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:9999;
+    background:white;
+    box-shadow:0 -4px 20px rgba(0,0,0,.15);
+  }
+
+  .mobile-bar a{
+    padding:14px 5px;
+    text-align:center;
+    font-size:12px;
+    font-weight:bold;
+  }
+
+  .call{
+    color:#087ee8;
+  }
+
+  .wa{
+    color:#18b957;
+  }
+
+  .book{
+    background:#087ee8;
+    color:white;
+  }
+}
+</style>
 </head>
 
 <body>
 
-<header class="header">
-  <div class="container nav">
-    <div class="logo">
-      <span>SKY</span> HEALTHCARE
-      <small>Home Healthcare Services</small>
-    </div>
+<!-- HEADER -->
 
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+<header>
+<div class="container nav">
 
-    <nav id="menu">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#why">Why Us</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
+<a href="#home" class="logo">
+<div class="logo-icon">+</div>
+<div>
+<h2>SKY HEALTHCARE</h2>
+<small>Home Healthcare Services</small>
+</div>
+</a>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#care">Patient Care</a>
+<a href="#equipment">Equipment</a>
+<a href="#about">Why Us</a>
+<a href="#faq">FAQ</a>
+<a href="#booking" class="nav-btn">Book Now</a>
+</nav>
+
+</div>
 </header>
 
 
-<section id="home" class="hero">
+<!-- HERO -->
 
-  <div class="hero-content">
+<section class="hero" id="home">
+<div class="container hero-grid">
 
-    <div class="hero-text">
-      <p class="tag">घरबसल्या संपूर्ण रुग्णसेवा</p>
+<div>
 
-      <h1>
-        Professional Healthcare<br>
-        <span>At Your Home</span>
-      </h1>
+<span class="badge">🏥 PROFESSIONAL HOME HEALTHCARE</span>
 
-      <p>
-        Trusted home healthcare services in Pune with
-        experienced nurses, caretakers, physiotherapists
-        and medical support.
-      </p>
+<h1>
+घरबसल्या <span>संपूर्ण रुग्णसेवा</span>
+</h1>
 
-      <div class="buttons">
-        <a href="tel:8888560080" class="btn call">📞 Call Now</a>
+<p>
+Professional Home Nursing, ICU Nursing, Patient Caretaker,
+Elderly Care, Doctor Home Visit, Physiotherapy & Medical
+Equipment Rental services in Pune.
+</p>
 
-        <a href="https://wa.me/919049343193?text=Hello%20Sky%20Healthcare%2C%20I%20want%20to%20book%20a%20home%20healthcare%20service."
-           class="btn whatsapp">
-          💬 WhatsApp
-        </a>
-      </div>
+<div class="hero-buttons">
 
-      <div class="availability">
-        ✓ 8 / 12 / 24 Hours Service &nbsp; ✓ Pune
-      </div>
-    </div>
+<a href="#booking" class="btn btn-primary">
+📋 Book a Service
+</a>
 
-    <div class="hero-card">
-      <div class="medical-icon">🏥</div>
-      <h3>Complete Home Care</h3>
-      <p>
-        Nursing • Caretaker • Physiotherapy •
-        Doctor Visit • ICU Setup
-      </p>
+<a href="https://wa.me/919049343193?text=Hello%20Sky%20Healthcare,%20I%20need%20home%20healthcare%20service." class="btn btn-whatsapp">
+💬 WhatsApp
+</a>
 
-      <a href="#booking" class="card-btn">Book Service</a>
-    </div>
+<a href="tel:+918888560080" class="btn btn-outline">
+📞 Call Now
+</a>
 
-  </div>
-
-</section>
-
-
-<section class="stats">
-
-  <div>
-    <strong>24/7</strong>
-    <span>Support</span>
-  </div>
-
-  <div>
-    <strong>8/12/24</strong>
-    <span>Hour Services</span>
-  </div>
-
-  <div>
-    <strong>Professional</strong>
-    <span>Healthcare Staff</span>
-  </div>
-
-  <div>
-    <strong>Pune</strong>
-    <span>Service Area</span>
-  </div>
-
-</section>
-
-
-<section id="services" class="section">
-
-  <div class="section-title">
-    <p>OUR SERVICES</p>
-    <h2>Healthcare Services At Home</h2>
-    <span>
-      Quality healthcare and professional support,
-      right at your doorstep.
-    </span>
-  </div>
-
-
-  <div class="services-grid">
-
-    <div class="service-card">
-      <div>👩‍⚕️</div>
-      <h3>Home Nursing</h3>
-      <p>
-        Experienced GNM, ANM and nursing staff
-        for professional patient care at home.
-      </p>
-    </div>
-
-
-    <div class="service-card">
-      <div>🧑‍⚕️</div>
-      <h3>ICU Nursing</h3>
-      <p>
-        Specialized nursing care for critical
-        and post-hospitalization patients.
-      </p>
-    </div>
-
-
-    <div class="service-card">
-      <div>👴</div>
-      <h3>Elderly Care</h3>
-      <p>
-        Compassionate care and daily assistance
-        for senior citizens.
-      </p>
-    </div>
-
-
-    <div class="service-card">
-      <div>❤️</div>
-      <h3>Patient Caretaker</h3>
-      <p>
-        Experienced Mama, Mavshi and ward boy
-        for day and night patient care.
-      </p>
-    </div>
-
-
-    <div class="service-card">
-      <div>🩺</div>
-      <h3>Doctor Home Visit</h3>
-      <p>
-        Doctor consultation and medical support
-        at your home.
-      </p>
-    </div>
-
-
-    <div class="service-card">
-      <div>🏃</div>
-      <h3>Physiotherapy</h3>
-      <p>
-        Professional physiotherapy sessions
-        at home.
-      </p>
-    </div>
-
-
-    <div class="service-card">
-      <div>🏠</div>
-      <h3>ICU Setup At Home</h3>
-      <p>
-        Home ICU setup and required medical
-        equipment support.
-      </p>
-    </div>
-
-
-    <div class="service-card">
-      <div>🛏️</div>
-      <h3>Medical Equipment Rental</h3>
-      <p>
-        Hospital beds, oxygen concentrators,
-        BiPAP, monitors and other equipment.
-      </p>
-    </div>
-
-  </div>
-
-</section>
-
-
-<section class="special-care">
-
-  <div class="special-content">
-
-    <div>
-      <p class="tag">SPECIALIZED CARE</p>
-
-      <h2>Care For Different Patient Needs</h2>
-
-      <p>
-        Our trained healthcare staff can assist patients
-        with various medical and daily care requirements.
-      </p>
-    </div>
-
-    <div class="care-list">
-
-      <div>✓ Parkinson's Care</div>
-      <div>✓ Paralysis Care</div>
-      <div>✓ Bed Sore Care</div>
-      <div>✓ Tracheostomy Care</div>
-      <div>✓ RT / Ryles Tube Feeding</div>
-      <div>✓ IV Line Care</div>
-      <div>✓ Catheter Care</div>
-      <div>✓ Post-Operative Care</div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section id="about" class="section about">
-
-  <div class="about-box">
-
-    <div class="about-image">
-      🏥
-    </div>
-
-    <div class="about-text">
-
-      <p class="tag">ABOUT SKY HEALTHCARE</p>
-
-      <h2>Healthcare With Care & Compassion</h2>
-
-      <p>
-        Sky Healthcare provides professional home healthcare
-        services in Pune. Our goal is to provide reliable,
-        compassionate and quality healthcare support to
-        patients in the comfort of their own home.
-      </p>
-
-      <p>
-        We provide trained nurses, nursing brothers,
-        caretakers, physiotherapists, doctor home visits
-        and medical equipment support.
-      </p>
-
-      <div class="mission">
-        <strong>आरोग्य • संघटन • सहकार्य</strong>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section id="why" class="section why">
-
-  <div class="section-title">
-    <p>WHY CHOOSE US</p>
-    <h2>Why Sky Healthcare?</h2>
-  </div>
-
-  <div class="why-grid">
-
-    <div>
-      <span>✓</span>
-      <h3>Experienced Staff</h3>
-      <p>Trained healthcare professionals and caregivers.</p>
-    </div>
-
-    <div>
-      <span>✓</span>
-      <h3>Flexible Hours</h3>
-      <p>8, 12 and 24 hour service options.</p>
-    </div>
-
-    <div>
-      <span>✓</span>
-      <h3>Home Convenience</h3>
-      <p>Healthcare support in the comfort of your home.</p>
-    </div>
-
-    <div>
-      <span>✓</span>
-      <h3>Quick Response</h3>
-      <p>Easy booking through phone and WhatsApp.</p>
-    </div>
-
-  </div>
-
-</section>
-
-
-<section id="booking" class="booking">
-
-  <div class="booking-content">
-
-    <div>
-      <p class="tag">BOOK A SERVICE</p>
-
-      <h2>Need Healthcare Support?</h2>
-
-      <p>
-        Fill in your details and contact us on WhatsApp.
-        Our team will get in touch with you.
-      </p>
-    </div>
-
-
-    <form onsubmit="sendWhatsApp(event)">
-
-      <input id="name" type="text" placeholder="Patient / Customer Name" required>
-
-      <input id="mobile" type="tel" placeholder="Mobile Number" required>
-
-      <select id="service" required>
-
-        <option value="">Select Service</option>
-
-        <option>Home Nursing</option>
-        <option>ICU Nursing</option>
-        <option>Patient Caretaker</option>
-        <option>Elderly Care</option>
-        <option>Doctor Home Visit</option>
-        <option>Physiotherapy</option>
-        <option>ICU Setup At Home</option>
-        <option>Medical Equipment Rental</option>
-
-      </select>
-
-      <input id="location" type="text" placeholder="Your Area in Pune" required>
-
-      <textarea id="message"
-        placeholder="Tell us about your requirement"></textarea>
-
-      <button type="submit">
-        Send Booking Request on WhatsApp
-      </button>
-
-    </form>
-
-  </div>
-
-</section>
-
-
-<section id="contact" class="contact">
-
-  <div class="section-title">
-    <p>CONTACT US</p>
-    <h2>Sky Healthcare</h2>
-  </div>
-
-  <div class="contact-grid">
-
-    <div>
-      <strong>📞 Call</strong>
-      <a href="tel:8888560080">8888560080</a>
-    </div>
-
-    <div>
-      <strong>💬 WhatsApp</strong>
-      <a href="https://wa.me/919049343193">
-        9049343193
-      </a>
-    </div>
-
-    <div>
-      <strong>📍 Office</strong>
-      <p>
-        2nd Floor, Subhashree Building,<br>
-        Chhatrapati Shivaji Maharaj Chowk,<br>
-        Hinjewadi Phase 1, Pune - 411057
-      </p>
-    </div>
-
-    <div>
-      <strong>✉️ Email</strong>
-      <a href="mailto:support.skyhealthcare@gmail.com">
-        support.skyhealthcare@gmail.com
-      </a>
-    </div>
-
-  </div>
-
-</section>
-
-
-<footer>
-
-  <div class="footer-logo">
-    SKY HEALTHCARE
-  </div>
-
-  <p>
-    घरबसल्या संपूर्ण रुग्णसेवा
-  </p>
-
-  <p>
-    © <span id="year"></span> Sky Healthcare.
-    All Rights Reserved.
-  </p>
-
-</footer>
-
-
-<div class="floating-buttons">
-
-  <a href="tel:8888560080" class="float-call">
-    📞
-  </a>
-
-  <a href="https://wa.me/919049343193" class="float-wa">
-    💬
-  </a>
+</div>
 
 </div>
 
 
-<script src="script.js"></script>
+<div class="hero-card">
 
-</body>
-  </html>
+<h3>Why Choose Sky Healthcare?</h3>
+
+<div class="hero-point">
+<div class="check">✓</div>
+<div><b>8 / 12 / 24 Hour Care</b><br>Flexible care options</div>
+</div>
+
+<div class="hero-point">
+<div class="check">✓</div>
+<div><b>Experienced Staff</b><br>Nurses, Caretakers & Ward Boys</div>
+</div>
+
+<div class="hero-point">
+<div class="check">✓</div>
+<div><b>Home Visit Services</b><br>Doctor & Physiotherapy</div>
+</div>
+
+<div class="hero-point">
+<div class="check">✓</div>
+<div><b>Pune & PCMC</b><br>Home healthcare support</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-title">
+<span>OUR SERVICES</span>
+<h2>Complete Home Healthcare Services</h2>
+<p>Personalized healthcare support at the comfort of your home.</p>
+</div>
+
+<div class="services-grid">
+
+<div class="card">
+<div class="icon">👩‍⚕️</div>
+<h3>Home Nursing</h3>
+<p>Professional nursing care at home according to patient requirements.</p>
+</div>
+
+<div class="card">
+<div class="icon">🏥</div>
+<h3>ICU Nursing</h3>
+<p>Specialized nursing support for critical and dependent patients.</p>
+</div>
+
+<div class="card">
+<div class="icon">🧑‍🦽</div>
+<h3>Patient Caretaker</h3>
+<p>Trained Mama, Mavshi and caregiver support for daily patient care.</p>
+</div>
+
+<div class="card">
+<div class="icon">👴</div>
+<h3>Elderly Care</h3>
+<p>Compassionate care and assistance for senior citizens.</p>
+</div>
+
+<div class="card">
+<div class="icon">👨‍⚕️</div>
+<h3>Doctor Home Visit</h3>
+<p>Doctor consultation and medical support at home.</p>
+</div>
+
+<div class="card">
+<div class="icon">🏃</div>
+<h3>Physiotherapy</h3>
+<p>Physiotherapy support at home for recovery and mobility.</p>
+</div>
+
+<div class="card">
+<div class="icon">❤️</div>
+<h3>Post-Operative Care</h3>
+<p>Professional support during recovery after surgery.</p>
+</div>
+
+<div class="card">
+<div class="icon">🛏️</div>
+<h3>ICU Setup at Home</h3>
+<p>Home ICU setup and required medical equipment support.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- TRUST -->
+
+<section class="trust">
+
+<div class="container trust-grid">
+
+<div class="trust-box">
+<strong>24/7</strong>
+<span>Support Availability</span>
+</div>
+
+<div class="trust-box">
+<strong>8/12/24</strong>
+<span>Care Options</span>
+</div>
+
+<div class="trust-box">
+<strong>Pune</strong>
+<span>Service Location</span>
+</div>
+
+<div class="trust-box">
+<strong>1 Call</strong>
+<span>Quick Enquiry</span>
+</div>
+
+</div>
+</section>
+
+
+<!-- SPECIAL CARE -->
+
+<section id="care">
+
+<div class="container">
+
+<div class="section-title">
+<span>SPECIALIZED CARE</span>
+<h2>Patient Care We Support</h2>
+<p>Our team can provide support based on the patient's care requirements.</p>
+</div>
+
+<div class="special-grid">
+
+<div class="special">
+<h3>🧠 Parkinson's Care</h3>
+<p>Daily assistance and patient support at home.</p>
+</div>
+
+<div class="special">
+<h3>♿ Paralysis Care</h3>
+<p>Personal care, mobility support and daily assistance.</p>
+</div>
+
+<div class="special">
+<h3>🩹 Bed Sore Care</h3>
+<p>Regular patient care and wound-care support as advised.</p>
+</div>
+
+<div class="special">
+<h3>🫁 Tracheostomy Care</h3>
+<p>Care support according to medical instructions.</p>
+</div>
+
+<div class="special">
+<h3>💉 IV Line Care</h3>
+<p>Support for patients requiring IV line-related care.</p>
+</div>
+
+<div class="special">
+<h3>🧪 Catheter Care</h3>
+<p>Routine patient assistance and catheter care support.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- EQUIPMENT -->
+
+<section class="equipment" id="equipment">
+
+<div class="container">
+
+<div class="section-title">
+<span>MEDICAL EQUIPMENT</span>
+<h2>Medical Equipment on Rent</h2>
+<p>Required equipment can be arranged based on availability and patient needs.</p>
+</div>
+
+<div class="equipment-grid">
+
+<div class="card">
+<div class="icon">🫁</div>
+<h3>Oxygen Concentrator</h3>
+<p>For home oxygen support.</p>
+<br>
+<a href="#booking" class="btn btn-primary">Enquire Now</a>
+</div>
+
+<div class="card">
+<div class="icon">💨</div>
+<h3>BiPAP / NIV</h3>
+<p>Respiratory support equipment.</p>
+<br>
+<a href="#booking" class="btn btn-primary">Enquire Now</a>
+</div>
+
+<div class="card">
+<div class="icon">🛏️</div>
+<h3>Hospital Bed</h3>
+<p>Home-use hospital beds.</p>
+<br>
+<a href="#booking" class="btn btn-primary">Enquire Now</a>
+</div>
+
+<div class="card">
+<div class="icon">🩺</div>
+<h3>ICU Monitor</h3>
+<p>Patient monitoring equipment.</p>
+<br>
+<a href="#booking" class="btn btn-primary">Enquire Now</a>
+</div>
+
+<div class="card">
+<div class="icon">💧</div>
+<h3>Suction Machine</h3>
+<p>Home respiratory care equipment.</p>
+<br>
+<a href="#booking" class="btn btn-primary">Enquire Now</a>
+</div>
+
+<div class="card">
+<div class="icon">🧴</div>
+<h3>Oxygen Cylinder</h3>
+<p>Oxygen cylinder availability on enquiry.</p>
+<br>
+<a href="#booking" class="btn btn-primary">Enquire Now</a>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<span>SIMPLE PROCESS</span>
+<h2>How It Works</h2>
+<p>Getting home healthcare support is simple.</p>
+</div>
+
+<div class="steps">
+
+<div class="step">
+<div class="step-number">1</div>
+<h3>Send Enquiry</h3>
+<p>Fill the booking form or contact us on WhatsApp.</p>
+</div>
+
+<div class="step">
+<div class="step-number">2</div>
+<h3>We Contact You</h3>
+<p>Our team discusses your patient's requirements.</p>
+</div>
+
+<div class="step">
+<div class="step-number">3</div>
+<h3>Service Starts</h3>
+<p>Suitable staff or service is arranged as required.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ABOUT / WHY US -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+<span>ABOUT SKY HEALTHCARE</span>
+<h2>Care With Trust & Compassion</h2>
+<p>
+Sky Healthcare provides home healthcare support for patients,
+elderly people and families who need professional assistance at home.
+</p>
+</div>
+
+<div class="services-grid">
+
+<div class="card">
+<div class="icon">👨‍⚕️</div>
+<h3>Trained Staff</h3>
+<p>Healthcare staff and caregivers according to service requirements.</p>
+</div>
+
+<div class="card">
+<div class="icon">⏰</div>
+<h3>Flexible Hours</h3>
+<p>8, 12 and 24-hour care options are available based on requirements.</p>
+</div>
+
+<div class="card">
+<div class="icon">📞</div>
+<h3>Quick Response</h3>
+<p>Contact us for service availability and patient care requirements.</p>
+</div>
+
+<div class="card">
+<div class="icon">❤️</div>
+<h3>Personalized Care</h3>
+<p>Care plans are arranged according to individual patient needs.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- AREAS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<span>SERVICE AREAS</span>
+<h2>Serving Pune & PCMC</h2>
+<p>Contact us to check staff and service availability in your area.</p>
+</div>
+
+<div class="areas">
+
+<span class="area">Hinjewadi</span>
+<span class="area">Wakad</span>
+<span class="area">Baner</span>
+<span class="area">Balewadi</span>
+<span class="area">Aundh</span>
+<span class="area">Pimple Saudagar</span>
+<span class="area">Kothrud</span>
+<span class="area">Pimpri-Chinchwad</span>
+<span class="area">Pune</span>
+
+</div>
+</div>
+</section>
+
+
+<!-- FAQ -->
+
+<section id="faq">
+
+<div class="container">
+
+<div class="section-title">
+<span>FAQ</span>
+<h2>Frequently Asked Questions</h2>
+</div>
+
+<div class="faq">
+
+<details>
+<summary>What home healthcare services do you provide?</summary>
+<p>We provide home nursing, ICU nursing, patient caretaker, elderly care, doctor home visit, physiotherapy, post-operative care and medical equipment rental services.</p>
+</details>
+
+<details>
+<summary>Do you provide 24-hour patient care?</summary>
+<p>Yes, 24-hour care options can be arranged based on staff availability and patient requirements.</p>
+</details>
+
+<details>
+<summary>Do you provide medical equipment on rent?</summary>
+<p>Yes. Equipment such as oxygen concentrators, hospital beds, BiPAP/NIV, suction machines and other equipment can be arranged subject to availability.</p>
+</details>
+
+<details>
+<summary>Which areas of Pune do you cover?</summary>
+<p>We provide services across Pune and PCMC. Contact us with your exact location to check availability.</p>
+</details>
+
+<details>
+<summary>How can I book a service?</summary>
+<p>You can fill the booking form, call us or send your requirements on WhatsApp.</p>
+</details>
+
+</div>
+</div>
+</section>
+
+
+<!-- BOOKING -->
+
+<section class="booking" id="booking">
+
+<div class="container">
+
+<div class="section-title">
+<span>BOOK A SERVICE</span>
+<h2>Tell Us What You Need</h2>
+<p>Submit your requirement and we will contact you.</p>
+</div>
+
+<div class="booking-box">
+
+<form id="bookingForm">
+
+<div class="form-grid">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<input type="tel" id="mobile" placeholder="Mobile Number" required>
+
+<select id="service" required>
+<option value="">Select Service</option>
+<option>Home Nursing</option>
+<option>ICU Nursing</option>
+<option>Patient Caretaker</option>
+<option>Elderly Care</option>
+<option>Doctor Home Visit</option>
+<option>Physiotherapy</option>
+<option>Post-Operative Care</option>
+<option>ICU Setup at Home</option>
+<option>Medical Equipment Rental</option>
+</select>
+
+<input type="text" id="area" placeholder="Your Area / Location" required>
+
+<input type="text" id="hours" placeholder="Required Hours (8 / 12 / 24)">
+
+<input type="date" id="date">
+
+</div>
+
+<textarea id="message" placeholder="Patient requirement / additional information"></textarea>
+
+<button type="submit" class="btn submit">
+💬 Send Booking Request on WhatsApp
+</button>
+
+</form>
+
+</div>
+</div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<span>CONTACT US</span>
+<h2>Sky Healthcare</h2>
+<p>Healthcare support at your doorstep.</p>
+</div>
+
+<div class="contact-grid">
+
+  
+<div class="contact-card">
+
+<
+  
